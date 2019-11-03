@@ -8,7 +8,7 @@ import PublicRoute from './PublicRoute';
 import Home from '../components/Home';
 import Landing from '../components/Landing';
 import SignIn from '../components/SignIn';
-import SignUp from '../components/SignUp';
+import SignUp from '../containers/SignUpContainer';
 import NotFound from '../components/NotFound';
 
 const Routes = () => {
