@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import * as ROUTES from '../constants/routes';
 
 import PrivateRoute from './PrivateRoute';
@@ -9,6 +9,7 @@ import Home from '../components/Home';
 import Landing from '../components/Landing';
 import SignIn from '../components/SignIn';
 import SignUp from '../components/SignUp';
+import NotFound from '../components/NotFound';
 
 const Routes = () => {
   return (
@@ -17,6 +18,7 @@ const Routes = () => {
       <PublicRoute path={ROUTES.LANDING} component={Landing} exact />
       <PublicRoute path={ROUTES.SIGN_IN} component={SignIn} />
       <PublicRoute path={ROUTES.SIGN_UP} component={SignUp} />
+      <Route component={NotFound} />
     </Switch>
   );
 };
