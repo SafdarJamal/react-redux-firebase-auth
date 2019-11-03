@@ -7,8 +7,8 @@ import PublicRoute from './PublicRoute';
 
 import Home from '../components/Home';
 import Landing from '../components/Landing';
-import SignIn from '../components/SignIn';
-import SignUp from '../containers/SignUpContainer';
+import SignInContainer from '../containers/SignInContainer';
+import SignUpContainer from '../containers/SignUpContainer';
 import NotFound from '../components/NotFound';
 
 const Routes = () => {
@@ -16,8 +16,8 @@ const Routes = () => {
     <Switch>
       <PrivateRoute path={ROUTES.HOME} component={Home} />
       <PublicRoute path={ROUTES.LANDING} component={Landing} exact />
-      <PublicRoute path={ROUTES.SIGN_IN} component={SignIn} />
-      <PublicRoute path={ROUTES.SIGN_UP} component={SignUp} />
+      <PublicRoute path={ROUTES.SIGN_IN} component={SignInContainer} />
+      <PublicRoute path={ROUTES.SIGN_UP} component={SignUpContainer} />
       <Route component={NotFound} />
     </Switch>
   );
