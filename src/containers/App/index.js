@@ -1,9 +1,10 @@
 import React, { Fragment } from 'react';
+import Routes from '../../routes';
 
 const App = () => {
   return (
     <Fragment>
-      <h1>Hello World</h1>;
+      <Routes />
     </Fragment>
   );
 };
