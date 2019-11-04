@@ -3,18 +3,12 @@ import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { SignIn } from '../../actions';
 import { withFirebase } from '../../services/firebase';
-import { authStateObserver } from '../../utils/authStateObserver';
 
 import Header from '../../components/Header';
 import Routes from '../../routes';
 import Footer from '../../components/Footer';
 
 class App extends Component {
-  componentDidMount() {
-    const { firebase, SignIn } = this.props;
-    authStateObserver(firebase, SignIn);
-  }
-
   render() {
     console.log(this.props.user);
 
