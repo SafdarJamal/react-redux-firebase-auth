@@ -1,6 +1,17 @@
 # React Firebase App
 
-React Boilerplate Project with Redux, React Router and Firebase.
+React Boilerplate with Redux, React Router and Firebase.
+
+## Features
+
+This boilerplate features all the latest tools and practices in the industry.
+
+- React - JavaScript library for building user interfaces
+- Redux - Predictable state container for JavaScript apps
+- Redux Persist - Redux middleware for persist and rehydrate a redux store
+- Prop Types - Runtime type checking for React props and similar objects
+- React Router - Declarative routing for React
+- Firebase - Backend-as-a-Service (BaaS) app development platform
 
 ## Development
 
