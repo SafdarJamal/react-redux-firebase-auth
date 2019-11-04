@@ -8,6 +8,8 @@ import SignUp from '../../components/SignUp';
 
 class SignUpContainer extends Component {
   state = {
+    firstName: '',
+    lastName: '',
     email: '',
     password: '',
     error: ''
@@ -21,7 +23,7 @@ class SignUpContainer extends Component {
     e.preventDefault();
 
     const { firebase, SignIn } = this.props;
-    const { email, password } = this.state;
+    const { firstName, lastName, email, password } = this.state;
 
     firebase
       .signUp(email, password)
@@ -30,9 +32,16 @@ class SignUpContainer extends Component {
         // console.log(user);
 
         const userData = {
-          email: user.email
+          firstName,
+          lastName,
+          email
         };
 
+        return firebase.addUser(user.uid, userData);
+      })
+      .then(() => firebase.getUser(firebase.auth.currentUser.uid))
+      .then(querySnapshot => {
+        const userData = querySnapshot.data();
         SignIn(userData);
       })
       .catch(error => {

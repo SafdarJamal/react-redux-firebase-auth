@@ -29,10 +29,10 @@ class SignInContainer extends Component {
         const user = success.user;
         // console.log(user);
 
-        const userData = {
-          email: user.email
-        };
-
+        return firebase.getUser(user.uid);
+      })
+      .then(querySnapshot => {
+        const userData = querySnapshot.data();
         SignInAction(userData);
       })
       .catch(error => {

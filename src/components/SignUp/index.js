@@ -8,16 +8,30 @@ const SignUp = ({ onChange, onSubmit, error }) => {
         <h1>Sign Up</h1>
         <p>{error}</p>
         <input
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          onChange={onChange}
+        />
+        <br />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          onChange={onChange}
+        />
+        <br />
+        <input
           type="email"
           name="email"
-          placeholder="Enter your email"
+          placeholder="Email"
           onChange={onChange}
         />
         <br />
         <input
           type="password"
           name="password"
-          placeholder="Enter your password"
+          placeholder="Password"
           onChange={onChange}
         />
         <br />
