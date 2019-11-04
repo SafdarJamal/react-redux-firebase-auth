@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SignIn = ({ onChange, onSubmit }) => {
+const SignIn = ({ onChange, onSubmit, error }) => {
   return (
     <div>
       <form onSubmit={onSubmit} autoComplete="off">
         <h1>Sign In</h1>
+        <p>{error}</p>
         <input
           type="email"
           name="email"
@@ -28,7 +29,8 @@ const SignIn = ({ onChange, onSubmit }) => {
 
 SignIn.propTypes = {
   onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired,
+  error: PropTypes.string.isRequired
 };
 
 export default SignIn;

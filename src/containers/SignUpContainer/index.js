@@ -9,7 +9,8 @@ import SignUp from '../../components/SignUp';
 class SignUpContainer extends Component {
   state = {
     email: '',
-    password: ''
+    password: '',
+    error: ''
   };
 
   handleChange = e => {
@@ -37,11 +38,19 @@ class SignUpContainer extends Component {
       .catch(error => {
         const errorMessage = error.message;
         console.log(errorMessage);
+
+        this.setState({ error: errorMessage });
       });
   };
 
   render() {
-    return <SignUp onChange={this.handleChange} onSubmit={this.handleSubmit} />;
+    return (
+      <SignUp
+        onChange={this.handleChange}
+        onSubmit={this.handleSubmit}
+        error={this.state.error}
+      />
+    );
   }
 }
 
