@@ -12,13 +12,11 @@ class Firebase {
     this.db = app.firestore();
   }
 
-  signIn = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email, password);
-
   signUp = (email, password) =>
     this.auth.createUserWithEmailAndPassword(email, password);
 
-  passwordReset = email => this.auth.sendPasswordResetEmail(email);
+  signIn = (email, password) =>
+    this.auth.signInWithEmailAndPassword(email, password);
 
   signOut = () => this.auth.signOut();
 
