@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const SignUp = ({ onChange, onSubmit, error }) => {
   return (
     <div>
-      <form onSubmit={onSubmit} autoComplete="off">
+      <form onSubmit={onSubmit}>
         <h1>Sign Up</h1>
         <p>{error}</p>
         <input

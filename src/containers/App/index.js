@@ -1,35 +1,16 @@
-import React, { Component, Fragment } from 'react';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import { SignIn } from '../../actions';
-import { withFirebase } from '../../services/firebase';
-
+import React, { Fragment } from 'react';
 import Header from '../../components/Header';
 import Routes from '../../routes';
 import Footer from '../../components/Footer';
 
-class App extends Component {
-  render() {
-    console.log(this.props.user);
-
-    return (
-      <Fragment>
-        <Header />
-        <Routes />
-        <Footer />
-      </Fragment>
-    );
-  }
-}
-
-const mapStateToProps = state => {
-  return { user: state.auth.user };
+const App = () => {
+  return (
+    <Fragment>
+      <Header />
+      <Routes />
+      <Footer />
+    </Fragment>
+  );
 };
 
-export default compose(
-  connect(
-    mapStateToProps,
-    { SignIn }
-  ),
-  withFirebase
-)(App);
+export default App;

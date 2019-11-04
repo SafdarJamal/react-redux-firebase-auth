@@ -5,17 +5,10 @@ const Home = ({ user, handleSignOut }) => {
   return (
     <div>
       <h1>Home</h1>
-      <p>
-        First Name: <strong>{user.firstName}</strong>
-        <br />
-        Last Name: <strong>{user.lastName}</strong>
-        <br />
-        Email: <strong>{user.email}</strong>
-        <br />
-        <button type="button" onClick={handleSignOut}>
-          Sign Out
-        </button>
-      </p>
+      <p>First Name: {user.firstName}</p>
+      <p>Last Name: {user.lastName}</p>
+      <p>Email: {user.email}</p>
+      <button onClick={handleSignOut}>Sign Out</button>
     </div>
   );
 };

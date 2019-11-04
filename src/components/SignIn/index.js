@@ -4,20 +4,20 @@ import PropTypes from 'prop-types';
 const SignIn = ({ onChange, onSubmit, error }) => {
   return (
     <div>
-      <form onSubmit={onSubmit} autoComplete="off">
+      <form onSubmit={onSubmit}>
         <h1>Sign In</h1>
         <p>{error}</p>
         <input
           type="email"
           name="email"
-          placeholder="Enter your email"
+          placeholder="Email"
           onChange={onChange}
         />
         <br />
         <input
           type="password"
           name="password"
-          placeholder="Enter your password"
+          placeholder="Password"
           onChange={onChange}
         />
         <br />
