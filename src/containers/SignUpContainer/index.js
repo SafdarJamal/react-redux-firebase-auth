@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { SignIn } from '../../actions';
+import { setUser } from '../../actions';
 import { withFirebase } from '../../services/firebase';
 
 import SignUp from '../../components/SignUp';
@@ -22,7 +22,7 @@ class SignUpContainer extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const { firebase, SignIn } = this.props;
+    const { firebase, setUser } = this.props;
     const { firstName, lastName, email, password } = this.state;
 
     firebase
@@ -42,7 +42,7 @@ class SignUpContainer extends Component {
       .then(() => firebase.getUser(firebase.auth.currentUser.uid))
       .then(querySnapshot => {
         const userData = querySnapshot.data();
-        SignIn(userData);
+        setUser(userData);
       })
       .catch(error => {
         const errorMessage = error.message;
@@ -66,7 +66,7 @@ class SignUpContainer extends Component {
 export default compose(
   connect(
     null,
-    { SignIn }
+    { setUser }
   ),
   withFirebase
 )(SignUpContainer);

@@ -13,7 +13,7 @@ const PrivateRoute = ({ user, component: Component, ...rest }) => (
 );
 
 const mapStateToProps = state => {
-  return { user: state.auth.user };
+  return { user: state.user };
 };
 
 export default connect(mapStateToProps)(PrivateRoute);

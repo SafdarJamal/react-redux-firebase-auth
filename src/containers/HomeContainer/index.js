@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { SignOut } from '../../actions';
+import { removeUser } from '../../actions';
 import { withFirebase } from '../../services/firebase';
 
 import Home from '../../components/Home';
 
 class HomeContainer extends Component {
   handleSignOut = () => {
-    const { firebase, SignOut } = this.props;
+    const { firebase, removeUser } = this.props;
 
     firebase
       .signOut()
       .then(() => {
-        SignOut();
+        removeUser();
       })
       .catch(error => {
         const errorMessage = error.message;
@@ -27,13 +27,13 @@ class HomeContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  return { user: state.auth.user };
+  return { user: state.user };
 };
 
 export default compose(
   connect(
     mapStateToProps,
-    { SignOut }
+    { removeUser }
   ),
   withFirebase
 )(HomeContainer);

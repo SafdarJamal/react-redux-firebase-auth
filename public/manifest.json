@@ -1,6 +1,6 @@
 {
-  "short_name": "react-firebase-auth",
-  "name": "react-firebase-auth",
+  "short_name": "React Firebase App",
+  "name": "React Firebase App",
   "icons": [
     {
       "src": "favicon.ico",

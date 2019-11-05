@@ -1,4 +1,4 @@
-const SIGN_IN = 'SIGN_IN';
-const SIGN_OUT = 'SIGN_OUT';
+const SET_USER = 'SET_USER';
+const REMOVE_USER = 'REMOVE_USER';
 
-export { SIGN_IN, SIGN_OUT };
+export { SET_USER, REMOVE_USER };
