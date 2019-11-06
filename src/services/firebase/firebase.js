@@ -20,6 +20,15 @@ class Firebase {
 
   signOut = () => this.auth.signOut();
 
+  verifyEmail = () =>
+    this.auth.currentUser.sendEmailVerification({
+      url: process.env.REACT_APP_EMAIL_CONFIRMATION_REDIRECT
+    });
+
+  resetPassword = email => this.auth.sendPasswordResetEmail(email);
+
+  updatePassword = password => this.auth.currentUser.updatePassword(password);
+
   addUser = (uid, userData) =>
     this.db
       .collection('users')
