@@ -31,9 +31,6 @@ const mapStateToProps = state => {
 };
 
 export default compose(
-  connect(
-    mapStateToProps,
-    { removeUser }
-  ),
+  connect(mapStateToProps, { removeUser }),
   withFirebase
 )(HomeContainer);

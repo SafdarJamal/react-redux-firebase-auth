@@ -55,9 +55,6 @@ class SignInContainer extends Component {
 }
 
 export default compose(
-  connect(
-    null,
-    { setUser }
-  ),
+  connect(null, { setUser }),
   withFirebase
 )(SignInContainer);
