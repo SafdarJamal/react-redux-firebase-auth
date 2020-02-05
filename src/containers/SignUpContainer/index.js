@@ -55,8 +55,8 @@ class SignUpContainer extends Component {
   render() {
     return (
       <SignUp
-        onChange={this.handleChange}
-        onSubmit={this.handleSubmit}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
         error={this.state.error}
       />
     );

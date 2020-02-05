@@ -46,8 +46,8 @@ class SignInContainer extends Component {
   render() {
     return (
       <SignIn
-        onChange={this.handleChange}
-        onSubmit={this.handleSubmit}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
         error={this.state.error}
       />
     );

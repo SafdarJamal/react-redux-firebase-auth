@@ -1,38 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SignUp = ({ onChange, onSubmit, error }) => {
+const SignUp = ({ handleChange, handleSubmit, error }) => {
   return (
     <div>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
         <p>{error}</p>
         <input
           type="text"
           name="firstName"
           placeholder="First Name"
-          onChange={onChange}
+          onChange={handleChange}
         />
         <br />
         <input
           type="text"
           name="lastName"
           placeholder="Last Name"
-          onChange={onChange}
+          onChange={handleChange}
         />
         <br />
         <input
           type="email"
           name="email"
           placeholder="Email"
-          onChange={onChange}
+          onChange={handleChange}
         />
         <br />
         <input
           type="password"
           name="password"
           placeholder="Password"
-          onChange={onChange}
+          onChange={handleChange}
         />
         <br />
         <button type="submit">Submit</button>
@@ -42,8 +42,8 @@ const SignUp = ({ onChange, onSubmit, error }) => {
 };
 
 SignUp.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func.isRequired,
+  handleChange: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
   error: PropTypes.string.isRequired
 };
 
