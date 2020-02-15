@@ -21,7 +21,7 @@ const SignIn = ({ handleChange, handleSubmit, error }) => {
           onChange={handleChange}
         />
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit">Sign In</button>
       </form>
     </div>
   );

@@ -1,8 +1,8 @@
 import { SET_USER, REMOVE_USER } from '../constants/actionTypes';
 
-const INITIAL_STATE = null;
+const initialState = null;
 
-const user = (state = INITIAL_STATE, action) => {
+const user = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER:
       return action.payload;

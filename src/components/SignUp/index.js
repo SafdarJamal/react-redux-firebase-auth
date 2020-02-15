@@ -35,7 +35,7 @@ const SignUp = ({ handleChange, handleSubmit, error }) => {
           onChange={handleChange}
         />
         <br />
-        <button type="submit">Submit</button>
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   );
