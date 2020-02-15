@@ -1,6 +1,6 @@
 # React Firebase App
 
-React Boilerplate with Redux, React Router and Firebase.
+React boilerplate with Redux, React Router and Firebase.
 
 ## Features
 
