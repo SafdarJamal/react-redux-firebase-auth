@@ -42,7 +42,7 @@ class SignUpContainer extends Component {
       .then(() => firebase.getUser(firebase.auth.currentUser.uid))
       .then(querySnapshot => {
         const userData = querySnapshot.data();
-        setUser(userData);
+        setUser({ user: userData });
       })
       .catch(error => {
         const errorMessage = error.message;

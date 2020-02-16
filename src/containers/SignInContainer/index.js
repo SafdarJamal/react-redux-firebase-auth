@@ -33,7 +33,7 @@ class SignInContainer extends Component {
       })
       .then(querySnapshot => {
         const userData = querySnapshot.data();
-        setUser(userData);
+        setUser({ user: userData });
       })
       .catch(error => {
         const errorMessage = error.message;

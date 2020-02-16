@@ -5,7 +5,7 @@ const initialState = null;
 const user = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER:
-      return action.payload;
+      return action.payload.user;
     case REMOVE_USER:
       return null;
     default:
