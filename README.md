@@ -18,8 +18,8 @@ This boilerplate features all the latest tools and practices in the industry.
 To get a local copy of the code, clone it using git:
 
 ```
-git clone https://github.com/SafdarJamal/react-firebase-auth.git
-cd react-firebase-auth
+git clone https://github.com/SafdarJamal/react-redux-firebase-auth.git
+cd react-redux-firebase-auth
 ```
 
 Install dependencies:
@@ -45,4 +45,4 @@ npm start
 
 ## License
 
-This project is licensed under the terms of the [MIT license](https://github.com/SafdarJamal/react-firebase-auth/blob/master/LICENSE).
+This project is licensed under the terms of the [MIT license](https://github.com/SafdarJamal/react-redux-firebase-auth/blob/master/LICENSE).
