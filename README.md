@@ -6,12 +6,12 @@ React boilerplate with Redux, React Router and Firebase.
 
 This boilerplate features all the latest tools and practices in the industry.
 
-- React - JavaScript library for building user interfaces
-- Redux - Predictable state container for JavaScript apps
-- Redux Persist - Redux middleware for persist and rehydrate a redux store
-- Prop Types - Runtime type checking for React props and similar objects
-- React Router - Declarative routing for React
-- Firebase - Backend-as-a-Service (BaaS) app development platform
+- [React](https://reactjs.org) - JavaScript library for building user interfaces
+- [Redux](https://redux.js.org) - Predictable state container for JavaScript apps
+- [Redux Persist](https://github.com/rt2zz/redux-persist) - Redux middleware for persist and rehydrate a redux store
+- [Prop Types](https://github.com/facebook/prop-types) - Runtime type checking for React props and similar objects
+- [React Router](https://reacttraining.com/react-router/web/guides/quick-start) - Declarative routing for React
+- [Firebase](https://firebase.google.com) - Backend-as-a-Service (BaaS) app development platform
 
 ## Development
 
