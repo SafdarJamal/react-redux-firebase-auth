@@ -10,7 +10,7 @@ class SignInContainer extends Component {
   state = {
     email: '',
     password: '',
-    error: ''
+    error: null
   };
 
   handleChange = e => {
@@ -44,11 +44,15 @@ class SignInContainer extends Component {
   };
 
   render() {
+    const { email, password, error } = this.state;
+
     return (
       <SignIn
+        email={email}
+        password={password}
         handleChange={this.handleChange}
         handleSubmit={this.handleSubmit}
-        error={this.state.error}
+        error={error}
       />
     );
   }
