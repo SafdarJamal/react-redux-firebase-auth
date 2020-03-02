@@ -1,7 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const SignUp = ({ handleChange, handleSubmit, error }) => {
+const SignUp = ({
+  firstName,
+  lastName,
+  email,
+  password,
+  handleChange,
+  handleSubmit,
+  error
+}) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
@@ -11,6 +19,7 @@ const SignUp = ({ handleChange, handleSubmit, error }) => {
           type="text"
           name="firstName"
           placeholder="First Name"
+          value={firstName}
           onChange={handleChange}
         />
         <br />
@@ -18,6 +27,7 @@ const SignUp = ({ handleChange, handleSubmit, error }) => {
           type="text"
           name="lastName"
           placeholder="Last Name"
+          value={lastName}
           onChange={handleChange}
         />
         <br />
@@ -25,6 +35,7 @@ const SignUp = ({ handleChange, handleSubmit, error }) => {
           type="email"
           name="email"
           placeholder="Email"
+          value={email}
           onChange={handleChange}
         />
         <br />
@@ -32,6 +43,7 @@ const SignUp = ({ handleChange, handleSubmit, error }) => {
           type="password"
           name="password"
           placeholder="Password"
+          value={password}
           onChange={handleChange}
         />
         <br />
@@ -42,9 +54,13 @@ const SignUp = ({ handleChange, handleSubmit, error }) => {
 };
 
 SignUp.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string.isRequired,
+  email: PropTypes.string.isRequired,
+  password: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  error: PropTypes.string.isRequired
+  error: PropTypes.string
 };
 
 export default SignUp;
