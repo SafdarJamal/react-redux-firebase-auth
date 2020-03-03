@@ -1,4 +1,5 @@
-import app from 'firebase/app';
+import firebase from 'firebase/app';
+
 import 'firebase/auth';
 import 'firebase/firestore';
 
@@ -6,10 +7,12 @@ import firebaseConfig from '../../config/firebaseConfig';
 
 class Firebase {
   constructor() {
-    app.initializeApp(firebaseConfig);
+    firebase.initializeApp(firebaseConfig);
 
-    this.auth = app.auth();
-    this.db = app.firestore();
+    this.auth = firebase.auth();
+    this.firestore = firebase.firestore();
+
+    this.usersCollectionRef = this.firestore.collection('users');
   }
 
   signUp = (email, password) =>
@@ -29,17 +32,9 @@ class Firebase {
 
   updatePassword = password => this.auth.currentUser.updatePassword(password);
 
-  addUser = (uid, userData) =>
-    this.db
-      .collection('users')
-      .doc(uid)
-      .set(userData);
+  addUser = (uid, userData) => this.usersCollectionRef.doc(uid).set(userData);
 
-  getUser = uid =>
-    this.db
-      .collection('users')
-      .doc(uid)
-      .get();
+  getUser = uid => this.usersCollectionRef.doc(uid).get();
 }
 
 export default Firebase;
