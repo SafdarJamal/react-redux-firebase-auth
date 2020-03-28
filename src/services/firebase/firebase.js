@@ -32,7 +32,7 @@ class Firebase {
 
   updatePassword = password => this.auth.currentUser.updatePassword(password);
 
-  addUser = (uid, userData) => this.usersCollectionRef.doc(uid).set(userData);
+  addUser = (uid, data) => this.usersCollectionRef.doc(uid).set(data);
 
   getUser = uid => this.usersCollectionRef.doc(uid).get();
 }

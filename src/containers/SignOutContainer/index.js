@@ -12,13 +12,8 @@ class SignOutContainer extends Component {
 
     firebase
       .signOut()
-      .then(() => {
-        removeUser();
-      })
-      .catch(error => {
-        const errorMessage = error.message;
-        console.log(errorMessage);
-      });
+      .then(() => removeUser())
+      .catch(error => console.log(error.message));
   };
 
   render() {
