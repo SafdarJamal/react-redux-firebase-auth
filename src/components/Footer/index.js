@@ -3,7 +3,16 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer>
-      <p>© 2019 Safdar Jamal</p>
+      <p>
+        &copy; 2019-2020{' '}
+        <a
+          href="https://safdarjamal.github.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Safdar Jamal
+        </a>
+      </p>
     </footer>
   );
 };
