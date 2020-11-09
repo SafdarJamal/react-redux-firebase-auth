@@ -27,20 +27,15 @@ class SignUpContainer extends Component {
 
     firebase
       .signUp(email, password)
-      .then(response => {
-        const data = {
+      .then(response =>
+        firebase.addUser(response.user.uid, {
           firstName,
           lastName,
           email
-        };
-
-        return firebase.addUser(response.user.uid, data);
-      })
+        })
+      )
       .then(() => firebase.getUser(firebase.auth.currentUser.uid))
-      .then(querySnapshot => {
-        const user = querySnapshot.data();
-        setUser({ user });
-      })
+      .then(querySnapshot => setUser(querySnapshot.data()))
       .catch(error => this.setState({ error: error.message }));
   };
 

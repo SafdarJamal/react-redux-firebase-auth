@@ -26,10 +26,7 @@ class SignInContainer extends Component {
     firebase
       .signIn(email, password)
       .then(response => firebase.getUser(response.user.uid))
-      .then(querySnapshot => {
-        const user = querySnapshot.data();
-        setUser({ user });
-      })
+      .then(querySnapshot => setUser(querySnapshot.data()))
       .catch(error => this.setState({ error: error.message }));
   };
 
