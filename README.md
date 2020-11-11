@@ -49,4 +49,4 @@ In this project, you can run the following scripts:
 
 ## License
 
-This project is licensed under the terms of the [MIT license](https://github.com/SafdarJamal/react-redux-firebase-auth/blob/master/LICENSE).
+This project is licensed under the [MIT license](https://github.com/SafdarJamal/react-redux-firebase-auth/blob/master/LICENSE).
