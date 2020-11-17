@@ -5,6 +5,9 @@ import * as ROUTES from '../../constants/routes';
 const Header = () => {
   return (
     <header>
+      <h1>
+        <code>React Redux Firebase Auth</code>
+      </h1>
       <nav>
         <ul>
           <li>
@@ -17,7 +20,7 @@ const Header = () => {
             <Link to={ROUTES.SIGN_IN}>Sign In</Link>
           </li>
           <li>
-            <Link to={ROUTES.HOME}>Home</Link>
+            <Link to={ROUTES.HOME}>Home (Protected)</Link>
           </li>
         </ul>
       </nav>
