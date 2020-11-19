@@ -1,6 +1,6 @@
-# React Firebase App
+# React Redux Firebase Auth
 
-React boilerplate with Redux, React Router and Firebase.
+An unstyled authentication kit for building websites and web applications using React, Redux, and Firebase.
 
 ## Features
 
