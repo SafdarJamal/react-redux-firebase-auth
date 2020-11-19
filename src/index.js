@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './store';
 import Firebase, { FirebaseContext } from './services/firebase';
-import { BrowserRouter as Router } from 'react-router-dom';
 import App from './containers/App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
@@ -13,11 +12,9 @@ ReactDOM.render(
   <Provider store={store}>
     <PersistGate persistor={persistor} loading={<div>Loading...</div>}>
       <FirebaseContext.Provider value={new Firebase()}>
-        <Router>
-          <StrictMode>
-            <App />
-          </StrictMode>
-        </Router>
+        <StrictMode>
+          <App />
+        </StrictMode>
       </FirebaseContext.Provider>
     </PersistGate>
   </Provider>,
