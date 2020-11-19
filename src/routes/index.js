@@ -15,9 +15,9 @@ const Routes = () => {
   return (
     <Switch>
       <PublicRoute path={ROUTES.LANDING} component={Landing} exact />
-      <PublicRoute path={ROUTES.SIGN_UP} component={SignUpContainer} />
-      <PublicRoute path={ROUTES.SIGN_IN} component={SignInContainer} />
-      <PrivateRoute path={ROUTES.HOME} component={HomeContainer} />
+      <PublicRoute path={ROUTES.SIGN_UP} component={SignUpContainer} exact />
+      <PublicRoute path={ROUTES.SIGN_IN} component={SignInContainer} exact />
+      <PrivateRoute path={ROUTES.HOME} component={HomeContainer} exact />
       <Route component={NotFound} />
     </Switch>
   );
