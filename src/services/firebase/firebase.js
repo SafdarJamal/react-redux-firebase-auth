@@ -23,7 +23,7 @@ class Firebase {
 
   signOut = () => this.auth.signOut();
 
-  verifyEmail = () =>
+  sendEmailVerificationLink = () =>
     this.auth.currentUser.sendEmailVerification({
       url: process.env.REACT_APP_EMAIL_CONFIRMATION_REDIRECT
     });
