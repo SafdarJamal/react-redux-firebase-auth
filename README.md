@@ -1,6 +1,6 @@
 # React Redux Firebase Auth
 
-An unstyled authentication kit for building websites and web applications using React, Redux, and Firebase.
+A fully naked/unstyled authentication starter kit for building websites and applications using React, Redux, and Firebase.
 
 ## Features
 
