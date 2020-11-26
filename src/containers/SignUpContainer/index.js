@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { setUser } from '../../actions';
+import { setUser } from '../../actions/user';
 import { withFirebase } from '../../services/firebase';
 
 import SignUp from '../../components/SignUp';

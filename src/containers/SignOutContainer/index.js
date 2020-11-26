@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { removeUser } from '../../actions';
+import { removeUser } from '../../actions/user';
 import { withFirebase } from '../../services/firebase';
 
 import SignOut from '../../components/SignOut';
