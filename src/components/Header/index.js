@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import * as ROUTES from '../../constants/routes';
+import * as routes from '../../constants/routes';
 
 const Header = () => {
   return (
@@ -11,16 +11,16 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <Link to={ROUTES.LANDING}>Landing</Link>
+            <Link to={routes.LANDING}>Landing</Link>
           </li>
           <li>
-            <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+            <Link to={routes.SIGN_UP}>Sign Up</Link>
           </li>
           <li>
-            <Link to={ROUTES.SIGN_IN}>Sign In</Link>
+            <Link to={routes.SIGN_IN}>Sign In</Link>
           </li>
           <li>
-            <Link to={ROUTES.HOME}>Home (Protected)</Link>
+            <Link to={routes.HOME}>Home (Protected)</Link>
           </li>
         </ul>
       </nav>
