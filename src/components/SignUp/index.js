@@ -14,7 +14,7 @@ const SignUp = ({
     <div>
       <form onSubmit={handleSubmit}>
         <h1>Sign Up</h1>
-        {error && <p>{error}</p>}
+        {error && <p>{error.message}</p>}
         <input
           type="text"
           name="firstName"

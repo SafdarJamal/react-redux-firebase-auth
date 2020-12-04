@@ -36,7 +36,7 @@ class SignUpContainer extends Component {
       )
       .then(() => firebase.getUser(firebase.auth.currentUser.uid))
       .then(querySnapshot => setUser(querySnapshot.data()))
-      .catch(error => this.setState({ error: error.message }));
+      .catch(error => this.setState({ error }));
   };
 
   render() {

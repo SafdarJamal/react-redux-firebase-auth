@@ -6,7 +6,7 @@ const SignIn = ({ email, password, handleChange, handleSubmit, error }) => {
     <div>
       <form onSubmit={handleSubmit}>
         <h1>Sign In</h1>
-        {error && <p>{error}</p>}
+        {error && <p>{error.message}</p>}
         <input
           type="email"
           name="email"
