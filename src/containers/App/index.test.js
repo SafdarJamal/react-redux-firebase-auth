@@ -10,7 +10,9 @@ const ConnectedApp = (
   </Provider>
 );
 
-test('renders without crashing', () => {
-  const { unmount } = render(ConnectedApp);
-  unmount();
+describe('<App />', () => {
+  test('renders without crashing', () => {
+    const { unmount } = render(ConnectedApp);
+    unmount();
+  });
 });
