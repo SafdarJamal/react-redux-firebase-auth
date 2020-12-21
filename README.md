@@ -1,5 +1,8 @@
 # React Redux Firebase Auth
 
+[![GitHub Release (latest by date)](https://img.shields.io/github/v/release/SafdarJamal/react-redux-firebase-auth)](https://github.com/SafdarJamal/react-redux-firebase-auth/releases)
+[![License](https://img.shields.io/github/license/SafdarJamal/react-redux-firebase-auth)](https://github.com/SafdarJamal/react-redux-firebase-auth/blob/master/LICENSE)
+
 An unstyled authentication starter kit for building websites and applications using React, Redux, and Firebase.
 
 ## Features
@@ -8,9 +11,9 @@ This boilerplate features all the latest tools and practices in the industry.
 
 - [React](https://reactjs.org) - A JavaScript library for building user interfaces
 - [Redux](https://redux.js.org) - A Predictable State Container for JavaScript Apps
-- [Redux Persist](https://github.com/rt2zz/redux-persist) - A Redux middleware for persisting and rehydrating a Redux store
+- [Redux Persist](https://github.com/rt2zz/redux-persist) - Middleware for persisting and rehydrating a Redux store
 - [Prop Types](https://github.com/facebook/prop-types) - Runtime type checking for React props and similar objects
-- [React Router](https://reacttraining.com/react-router/web/guides/quick-start) - Declarative routing for React
+- [React Router](https://github.com/ReactTraining/react-router) - Declarative routing for React
 - [Firebase](https://firebase.google.com) - A Backend-as-a-Service (BaaS) app development platform
 
 ## Development
