@@ -6,12 +6,12 @@ An unstyled authentication starter kit for building websites and applications us
 
 This boilerplate features all the latest tools and practices in the industry.
 
-- [React](https://reactjs.org) - JavaScript library for building user interfaces
-- [Redux](https://redux.js.org) - Predictable state container for JavaScript apps
-- [Redux Persist](https://github.com/rt2zz/redux-persist) - Redux middleware for persist and rehydrate a redux store
+- [React](https://reactjs.org) - A JavaScript library for building user interfaces
+- [Redux](https://redux.js.org) - A Predictable State Container for JavaScript Apps
+- [Redux Persist](https://github.com/rt2zz/redux-persist) - A Redux middleware for persisting and rehydrating a Redux store
 - [Prop Types](https://github.com/facebook/prop-types) - Runtime type checking for React props and similar objects
 - [React Router](https://reacttraining.com/react-router/web/guides/quick-start) - Declarative routing for React
-- [Firebase](https://firebase.google.com) - Backend-as-a-Service (BaaS) app development platform
+- [Firebase](https://firebase.google.com) - A Backend-as-a-Service (BaaS) app development platform
 
 ## Development
 
