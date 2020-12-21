@@ -60,7 +60,7 @@ SignUp.propTypes = {
   password: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  error: PropTypes.string
+  error: PropTypes.object
 };
 
 export default SignUp;
