@@ -52,8 +52,8 @@ In this project, you can run the following scripts:
 
 ## Credits
 
-React Redux Firebase Auth is built and maintained by [Safdar Jamal](https://safdarjamal.github.io).
+This project is built and maintained by [Safdar Jamal](https://safdarjamal.github.io).
 
 ## License
 
-This project is licensed under the [Apache License 2.0](https://github.com/SafdarJamal/react-redux-firebase-auth/blob/master/LICENSE).
+Licensed under the [Apache License 2.0](https://github.com/SafdarJamal/react-redux-firebase-auth/blob/master/LICENSE).
