@@ -2,6 +2,10 @@
   "name": "react-redux-firebase-auth",
   "version": "2.0.0",
   "private": true,
+  "author": {
+    "name": "Safdar Jamal",
+    "url": "https://safdarjamal.github.io"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
