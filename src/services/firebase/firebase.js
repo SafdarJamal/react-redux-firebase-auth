@@ -9,7 +9,8 @@ import {
   sendPasswordResetEmail,
   updatePassword,
 } from 'firebase/auth';
-import 'firebase/compat/firestore';
+
+import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
 import firebaseConfig from './config';
 
@@ -18,9 +19,7 @@ class Firebase {
     firebase.initializeApp(firebaseConfig);
 
     this.auth = getAuth();
-    this.firestore = firebase.firestore();
-
-    this.usersCollectionRef = this.firestore.collection('users');
+    this.firestore = getFirestore();
   }
 
   signUp = (email, password) =>
@@ -40,9 +39,9 @@ class Firebase {
 
   updatePassword = password => updatePassword(this.auth.currentUser, password);
 
-  addUser = (uid, data) => this.usersCollectionRef.doc(uid).set(data);
+  addUser = (uid, data) => setDoc(doc(this.firestore, 'users', uid), data);
 
-  getUser = uid => this.usersCollectionRef.doc(uid).get();
+  getUser = uid => getDoc(doc(this.firestore, 'users', uid));
 }
 
 export default Firebase;
