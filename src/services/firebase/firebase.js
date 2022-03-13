@@ -1,6 +1,14 @@
 import firebase from 'firebase/compat/app';
 
-import 'firebase/compat/auth';
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  sendEmailVerification,
+  sendPasswordResetEmail,
+  updatePassword,
+} from 'firebase/auth';
 import 'firebase/compat/firestore';
 
 import firebaseConfig from './config';
@@ -9,28 +17,28 @@ class Firebase {
   constructor() {
     firebase.initializeApp(firebaseConfig);
 
-    this.auth = firebase.auth();
+    this.auth = getAuth();
     this.firestore = firebase.firestore();
 
     this.usersCollectionRef = this.firestore.collection('users');
   }
 
   signUp = (email, password) =>
-    this.auth.createUserWithEmailAndPassword(email, password);
+    createUserWithEmailAndPassword(this.auth, email, password);
 
   signIn = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email, password);
+    signInWithEmailAndPassword(this.auth, email, password);
 
-  signOut = () => this.auth.signOut();
+  signOut = () => signOut(this.auth);
 
   sendEmailVerificationLink = () =>
-    this.auth.currentUser.sendEmailVerification({
+    sendEmailVerification(this.auth.currentUser, {
       url: process.env.REACT_APP_EMAIL_CONFIRMATION_REDIRECT,
     });
 
-  resetPassword = email => this.auth.sendPasswordResetEmail(email);
+  resetPassword = email => sendPasswordResetEmail(this.auth, email);
 
-  updatePassword = password => this.auth.currentUser.updatePassword(password);
+  updatePassword = password => updatePassword(this.auth.currentUser, password);
 
   addUser = (uid, data) => this.usersCollectionRef.doc(uid).set(data);
 
