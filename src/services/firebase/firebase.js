@@ -1,7 +1,7 @@
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app';
 
-import 'firebase/auth';
-import 'firebase/firestore';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 import firebaseConfig from './config';
 
@@ -25,7 +25,7 @@ class Firebase {
 
   sendEmailVerificationLink = () =>
     this.auth.currentUser.sendEmailVerification({
-      url: process.env.REACT_APP_EMAIL_CONFIRMATION_REDIRECT
+      url: process.env.REACT_APP_EMAIL_CONFIRMATION_REDIRECT,
     });
 
   resetPassword = email => this.auth.sendPasswordResetEmail(email);
