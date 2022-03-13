@@ -1,5 +1,4 @@
 import { initializeApp } from 'firebase/app';
-
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -9,7 +8,6 @@ import {
   sendPasswordResetEmail,
   updatePassword,
 } from 'firebase/auth';
-
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
 import firebaseConfig from './config';

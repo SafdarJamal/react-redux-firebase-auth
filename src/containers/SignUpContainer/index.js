@@ -12,7 +12,7 @@ class SignUpContainer extends Component {
     lastName: '',
     email: '',
     password: '',
-    error: null
+    error: null,
   };
 
   handleChange = e => {
@@ -31,7 +31,7 @@ class SignUpContainer extends Component {
         firebase.addUser(response.user.uid, {
           firstName,
           lastName,
-          email
+          email,
         })
       )
       .then(() => firebase.getUser(firebase.auth.currentUser.uid))

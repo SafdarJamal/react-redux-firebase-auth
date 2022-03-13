@@ -10,7 +10,7 @@ class HomeContainer extends Component {
 }
 
 const mapStateToProps = state => ({
-  user: state.user
+  user: state.user,
 });
 
 export default connect(mapStateToProps)(HomeContainer);
