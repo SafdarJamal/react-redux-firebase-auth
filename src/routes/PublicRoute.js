@@ -13,7 +13,7 @@ const PublicRoute = ({ user, component: Component, ...rest }) => (
 );
 
 const mapStateToProps = state => ({
-  user: state.user
+  user: state.user,
 });
 
 export default connect(mapStateToProps)(PublicRoute);

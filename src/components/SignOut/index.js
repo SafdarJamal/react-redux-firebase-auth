@@ -6,7 +6,7 @@ const SignOut = ({ handleSignOut }) => {
 };
 
 SignOut.propTypes = {
-  handleSignOut: PropTypes.func.isRequired
+  handleSignOut: PropTypes.func.isRequired,
 };
 
 export default SignOut;

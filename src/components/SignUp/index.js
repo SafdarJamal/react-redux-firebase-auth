@@ -8,7 +8,7 @@ const SignUp = ({
   password,
   handleChange,
   handleSubmit,
-  error
+  error,
 }) => {
   return (
     <div>
@@ -60,7 +60,7 @@ SignUp.propTypes = {
   password: PropTypes.string.isRequired,
   handleChange: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  error: PropTypes.object
+  error: PropTypes.object,
 };
 
 export default SignUp;

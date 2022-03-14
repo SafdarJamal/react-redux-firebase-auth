@@ -10,7 +10,7 @@ class SignInContainer extends Component {
   state = {
     email: '',
     password: '',
-    error: null
+    error: null,
   };
 
   handleChange = e => {

@@ -1,40 +1,45 @@
-import firebase from 'firebase/app';
-
-import 'firebase/auth';
-import 'firebase/firestore';
+import { initializeApp } from 'firebase/app';
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  sendEmailVerification,
+  sendPasswordResetEmail,
+  updatePassword,
+} from 'firebase/auth';
+import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 
 import firebaseConfig from './config';
 
 class Firebase {
   constructor() {
-    firebase.initializeApp(firebaseConfig);
+    this.firebase = initializeApp(firebaseConfig);
 
-    this.auth = firebase.auth();
-    this.firestore = firebase.firestore();
-
-    this.usersCollectionRef = this.firestore.collection('users');
+    this.auth = getAuth();
+    this.firestore = getFirestore();
   }
 
   signUp = (email, password) =>
-    this.auth.createUserWithEmailAndPassword(email, password);
+    createUserWithEmailAndPassword(this.auth, email, password);
 
   signIn = (email, password) =>
-    this.auth.signInWithEmailAndPassword(email, password);
+    signInWithEmailAndPassword(this.auth, email, password);
 
-  signOut = () => this.auth.signOut();
+  signOut = () => signOut(this.auth);
 
   sendEmailVerificationLink = () =>
-    this.auth.currentUser.sendEmailVerification({
-      url: process.env.REACT_APP_EMAIL_CONFIRMATION_REDIRECT
+    sendEmailVerification(this.auth.currentUser, {
+      url: process.env.REACT_APP_EMAIL_CONFIRMATION_REDIRECT,
     });
 
-  resetPassword = email => this.auth.sendPasswordResetEmail(email);
+  resetPassword = email => sendPasswordResetEmail(this.auth, email);
 
-  updatePassword = password => this.auth.currentUser.updatePassword(password);
+  updatePassword = password => updatePassword(this.auth.currentUser, password);
 
-  addUser = (uid, data) => this.usersCollectionRef.doc(uid).set(data);
+  addUser = (uid, data) => setDoc(doc(this.firestore, 'users', uid), data);
 
-  getUser = uid => this.usersCollectionRef.doc(uid).get();
+  getUser = uid => getDoc(doc(this.firestore, 'users', uid));
 }
 
 export default Firebase;
