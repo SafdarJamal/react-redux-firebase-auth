@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer>
       <p>
-        &copy; 2019-2020{' '}
+        &copy; 2019-2022{' '}
         <a
           href="https://safdarjamal.github.io"
           target="_blank"
