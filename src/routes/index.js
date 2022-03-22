@@ -14,10 +14,10 @@ import NotFound from '../components/NotFound';
 const AppRoutes = () => {
   return (
     <Routes>
-      <PublicRoute path={routes.LANDING} component={Landing} exact />
-      <PublicRoute path={routes.SIGN_UP} component={SignUpContainer} exact />
-      <PublicRoute path={routes.SIGN_IN} component={SignInContainer} exact />
-      <PrivateRoute path={routes.HOME} component={HomeContainer} exact />
+      <PublicRoute path={routes.LANDING} component={Landing} />
+      <PublicRoute path={routes.SIGN_UP} component={SignUpContainer} />
+      <PublicRoute path={routes.SIGN_IN} component={SignInContainer} />
+      <PrivateRoute path={routes.HOME} component={HomeContainer} />
       <Route component={NotFound} />
     </Routes>
   );
