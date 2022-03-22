@@ -18,7 +18,7 @@ const AppRoutes = () => {
       <PublicRoute path={routes.SIGN_UP} component={SignUpContainer} />
       <PublicRoute path={routes.SIGN_IN} component={SignInContainer} />
       <PrivateRoute path={routes.HOME} component={HomeContainer} />
-      <Route path="*" element={NotFound} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };
