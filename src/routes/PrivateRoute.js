@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Route, Redirect } from 'react-router-dom';
+import { Route, Navigate } from 'react-router-dom';
 import * as routes from '../constants/routes';
 
 const PrivateRoute = ({ user, component: Component, ...rest }) => (
   <Route
     {...rest}
     render={props =>
-      user ? <Component {...props} /> : <Redirect push to={routes.SIGN_IN} />
+      user ? <Component {...props} /> : <Navigate to={routes.SIGN_IN} />
     }
   />
 );
