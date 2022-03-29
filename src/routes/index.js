@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import * as routes from '../constants/routes';
 
 import PublicRoute from './PublicRoute';
@@ -11,16 +11,28 @@ import SignInContainer from '../containers/SignInContainer';
 import HomeContainer from '../containers/HomeContainer';
 import NotFound from '../components/NotFound';
 
-const Routes = () => {
+const AppRoutes = () => {
   return (
-    <Switch>
-      <PublicRoute path={routes.LANDING} component={Landing} exact />
-      <PublicRoute path={routes.SIGN_UP} component={SignUpContainer} exact />
-      <PublicRoute path={routes.SIGN_IN} component={SignInContainer} exact />
-      <PrivateRoute path={routes.HOME} component={HomeContainer} exact />
-      <Route component={NotFound} />
-    </Switch>
+    <Routes>
+      <Route
+        path={routes.LANDING}
+        element={<PublicRoute component={Landing} />}
+      />
+      <Route
+        path={routes.SIGN_UP}
+        element={<PublicRoute component={SignUpContainer} />}
+      />
+      <Route
+        path={routes.SIGN_IN}
+        element={<PublicRoute component={SignInContainer} />}
+      />
+      <Route
+        path={routes.HOME}
+        element={<PrivateRoute component={HomeContainer} />}
+      />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 };
 
-export default Routes;
+export default AppRoutes;
