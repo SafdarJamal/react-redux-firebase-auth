@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import * as routes from '../constants/routes';
 
 const PrivateRoute = ({ user, component: Component }) =>
-  user ? <Component /> : <Navigate to={routes.SIGN_IN} />;
+  user ? <Component /> : <Navigate to={routes.SIGN_IN} replace />;
 
 const mapStateToProps = state => ({
   user: state.user,
